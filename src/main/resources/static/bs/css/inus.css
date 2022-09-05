@@ -1,0 +1,850 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;   
+    padding: 0;
+    margin: 0;
+    
+}
+
+body {
+   background: linear-gradient(#141e30, rgb(52, 85, 122));
+}
+header{
+    background-color: #172236;
+    width: 100%;
+    height: 7vh;
+    position: relative;
+}
+#logo{
+	position:absolute;
+    margin-top:3px;
+    margin-left: 46%;
+    width: 92px;
+    /*height:*/
+    float: left;
+    cursor: pointer;
+} 
+
+/* 검색창 */
+
+.search-box{
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  margin-left:35px;
+  margin-bottom:10px;
+}
+.input-search{
+  height: 50px;
+  width: 50px;
+  border-style: none;
+  padding: 10px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  transition: all .5s ease-in-out;
+  background-color: #fff;
+  padding-right: 40px;
+  color:#fff;
+}
+.input-search::placeholder{
+  color:#fff;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+.btn-search{
+  width: 50px;
+  height: 50px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  color:#7b9acc;
+  background-color:transparent;
+  pointer-events: painted;  
+}
+.btn-search:focus ~ .input-search{
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom:2px solid #fff;
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+.input-search:focus{
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom:1px solid rgba(255,255,255,.5);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+.device {
+   width:100%;
+   height:900px;
+}
+p{ text-align: left;
+}
+
+ul{list-style: none; 
+ }
+ 
+.Lbar img{
+     width: 100px;  
+ }
+ 
+ul{
+     list-style: none;
+ }
+ 
+ .Lbar ul li{   /*얘 줘야해*/
+     background-color: bisque;
+ }
+ 
+ .Lbar ul a{
+    list-style: none;
+    color: black;
+ }
+
+.ServerList{
+    width: 70px;         /*수정*/
+    height: 900px;   /*수정*/
+    background-color: #202225;
+    float: left;
+}
+
+#serverCount{
+    margin-left: 5px;   /*수정*/
+    margin-top: 18px;
+    font-size: 50px;
+    width: 46px;
+    height: 46px;
+}
+
+#serverCount .li {
+    list-style:none;
+}
+
+.serverImg{
+    width: 46px;
+    height: 46px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-left: 0.5px;
+}
+#plusServerImg{
+	margin-left: 7px;
+}
+#channelSpace{
+	margin-left: 6px;
+}
+.serverImg:hover{
+    border-radius: 20%;
+}
+
+.ChatAndFriendList{
+     width: 250px;
+     height: 900px;   /*수정*/
+     background-color: #2f3136;
+     border: 1px;   /*수정*/
+     border-top-right-radius: 19px;   /*수정*/
+     float: left;
+     position: relative;
+}
+   
+.chatAndFriendheader{
+    color: white;
+    text-align:left;
+    width: 250px;   /*수정*/
+    height:900px;   /*수정*/
+    position: relative;
+}
+
+.headerP{
+    width: 250px;
+    background-color: #37393f;
+    border: 1.5px solid #202225;
+    border-top-right-radius: 19px;      /*수정*/
+}
+    
+.headerP:hover{
+    background-color: #2f3136;
+}
+    
+#ChatName {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left:8px;      /*수정*/
+    text-align: left;      /*수정*/
+}   
+    
+.ChatAndFriend_Icon{
+    position:absolute;
+    right: 5px;
+    top:19px;
+    width: 14px;
+}
+
+.chatAndFriendheader ul{
+   margin-top: 10px;
+   margin-left: 6px;
+}
+
+.chatAndFriendheader ul li img{
+    width: 30px;
+    height:30px;
+    float: left;
+    border: 1px;
+    border-radius: 50%;
+}
+    
+.chatAndFriendheader li p{
+	font-size: 15.5px;
+    float: left;
+    margin-top: 9px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+#friendMember {
+	float: left;
+    margin-top: 14px;
+    margin-left: 5px;
+    cursor: pointer;
+    color: #B9BBBE;
+    font-style: oblique;
+    font-size: 19px;
+}
+
+#friendMember:hover{
+	background-color: #36393F;
+	color: white;
+}
+
+.friend ul li:hover{
+	background-color: #B9BBBE;
+} 
+.chatAndFriendheader li {
+    clear: both;
+   margin-top: 10px;
+}   
+   
+.ServerReplace{
+     position: absolute;
+   top: 47px;
+   width: 182px;
+   height: 100px;
+   background-color: #202225;
+   margin-left: 5px;
+   display: none;
+}
+
+
+
+ /*나연 수정0813*/
+.FriendReplace{
+   position: absolute;
+   top: 47px;
+   width: 192px;
+   height: 80px;
+   background-color: #202225;
+   margin-left: 5px;
+   display: none;
+}
+.FriendReplace p{
+	font-size: 13px;
+	margin: 10px;
+}
+.FriendReplace #friendAdd{
+	font-size: 13px;
+    position: absolute;
+    top: 40px;
+    left: 8px;
+    width: 160px;
+    height: 28px;
+    color: #202225;
+    background-color: white;
+    border: 1px;
+    border-radius: 3px;
+}
+
+
+/*여기까지*/
+
+.update{
+	margin-left:330px;
+}
+.delete{
+	margin-left:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*중앙 메인 부분*/
+.device{
+   width:100%;
+} 
+.postpade {
+    width: 500px;
+    height: 750px;
+}  
+.post {
+   box-shadow: 3px 3px 3px 3px #000;
+   background: #fff;
+   margin:0 auto;
+}
+.instagram {
+   margin-left:280px;
+    width: 600px;
+    height: 900px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    float:left;
+    
+}
+
+/* layout principal */
+.instagram .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 44px;
+    padding: .4em;
+}
+.instagram .scroll {
+    width: 100%;
+    flex-grow: 1;
+    overflow: auto;
+    overflow-x: hidden;
+   scrollbar-width: none;
+   background: linear-gradient(#172438, rgb(52, 85, 122));
+   width: 650px;
+   height: 100%;
+   overflow-y: scroll;
+   -ms-overflow-style: none;
+}
+.instagram .scroll::-webkit-scrollbar{
+  display:none;
+}
+.instagram .bottom {
+    box-shadow: 0 -2px 2px rgba(0,0,0,.1);
+}
+
+
+/* layout footer */
+.instagram .bottom .footer-btn {
+    width: 20%;
+    text-align: center;
+}
+.instagram .bottom .footer-btn span {
+    background-image: url(https://storage.googleapis.com/mkts/insta-sprite.png);
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}
+.instagram .bottom .footer-btn .home {
+    background-size: 270px 235px;
+    background-position: -50px -161px;
+}
+.instagram .bottom .footer-btn .search {
+    background-size: 270px 235px;
+    background-position: 0 -211px;
+}
+.instagram .bottom .footer-btn .add {
+    background-size: 270px 235px;
+    background-position: -75px -186px;
+}
+.instagram .bottom .footer-btn .like {
+    background-size: 270px 235px;
+    background-position: -25px -161px;
+}
+.instagram .bottom .footer-btn .profile {
+    background-size: 270px 235px;
+    background-position: -196px 0;
+}
+
+/* stories layout */
+.instagram .stories {
+    min-height: 103px;
+    width: 100%;
+    padding: .4em 0;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #e9e9e9;
+    overflow: hidden;
+}
+.instagram .stories .scroll-stories {
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.instagram .stories .scroll-stories::-webkit-scrollbar {
+    width: 0;
+}
+.instagram .stories .scroll-stories .storie {
+    margin: 0 0 0 1em;
+    text-align: center;
+    width: 66px;
+}
+.instagram .stories .scroll-stories .storie .photo {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    border: 2px solid deeppink;
+    display: inline-block;
+}
+.instagram .stories .scroll-stories .storie .photo img {
+    width: calc(66px - 4px);
+    height: calc(66px - 4px);
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: #e9e9e9;
+}
+.instagram .stories .scroll-stories .storie .name {
+    font-size: .75em;
+    color: #000;
+}
+
+/* post layout */
+.instagram .content {
+   width:30%;
+   float:left;
+}
+.instagram .content .post {
+   margin:30px;
+   border:1px solid #ccc;
+    width: 600px;
+    margin-bottom: 1em;
+    border-radius: 5px;
+}
+
+.instagram .content .post .post-header {
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: .4em;
+}
+.instagram .content .post .post-header .user-thumb {
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid deeppink;
+}
+.instagram .content .post .post-header .user-details {
+    font-size: .95em;
+    line-height: 1em;
+    flex-grow: 1;
+    padding: 0 .5em;
+}
+.instagram .content .post .post-header .user-details strong, .instagram .content .post .post-header .user-details span {
+    display: block;
+}
+.instagram .content .post .post-header .post-menu {
+    min-width: 40px;
+}
+.instagram .content .post .post-header .post-menu .menu {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: 270px 235px;
+    background-position: -50px -186px;
+    background-image: url(https://storage.googleapis.com/mkts/insta-sprite.png);
+}
+.instagram .content .post .post-photo {
+    width: 100%;
+    height:500px;
+}
+.instagram .content .post .post-photo1 {
+    width: 100%;
+    height:100%;
+}
+.instagram .content .post .post-footer .buttons {
+    width: 100%;
+    padding: .4em 1em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.instagram .content .post .post-footer .buttons .spacer {
+    flex-grow: 1;
+}
+.instagram .content .post .post-footer .buttons .post-btn {
+    text-align: center;
+    min-width: 40px;
+}
+.instagram .content .post .post-footer .buttons .post-btn span {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url(https://storage.googleapis.com/mkts/insta-sprite.png);
+}
+.instagram .content .post .post-footer .buttons .post-btn .like {
+    background-size: 270px 235px;
+    background-position: -25px -161px;
+}
+.instagram .content .post .post-footer .buttons .post-btn .comn {
+    background-size: 270px 235px;
+    background-position: -142px -103px;
+}
+.instagram .content .post .post-footer .buttons .post-btn .save {
+    background-size: 270px 235px;
+    background-position: -221px -150px;
+}
+.instagram .content .post .post-footer .likes {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: .4em 1em;
+    font-size: .95em;
+}
+.instagram .content .post .post-footer .likes .user-like {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: .5em;
+}
+.instagram .content .post .post-footer .likes strong {
+    margin: 0 .3em;
+}
+.instagram .content .post .post-footer .comments {
+    width: 100%;
+    padding: .4em 1em;
+    font-size: .95em;
+}
+.instagram .content .post .post-footer .comments p {
+    margin: 0;
+}
+.instagram .content .post .post-footer .time {
+    text-transform: uppercase;
+    display: block;
+    padding: 0 1em;
+    color: #c0c0c0;
+    font-size: .75em;
+}
+
+.left_area h3{
+  color: #fff;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.left_area span{
+  color: #19B3D3;
+}
+
+.logout_btn{
+  padding: 5px;
+  background: #19B3D3;
+  text-decoration: none;
+  float: right;
+  margin-top: -30px;
+  margin-right: 40px;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  transition: 0.5s;
+  transition-property: background;
+}
+
+.logout_btn:hover{
+  background: #0B87A6;
+}
+
+.sidebar {
+  float:right;
+  right:0;
+  background: #2f323a;
+  position: fixed;
+  width: 390px;
+  height: 900px;
+  transition: 0.5s;
+  transition-property: left;
+  border-top-left-radius:10px;
+}
+
+.sidebar .profile_image{
+  margin-top:20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+
+.sidebar h4{
+  color: #ccc;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.sidebar a{
+  color: #fff;
+  display: block;
+  width: 100%;
+  line-height: 60px;
+  text-decoration: none;
+  padding-left: 40px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  transition-property: background;
+}
+
+.sidebar a:hover{
+  background: #19B3D3;
+}
+
+.sidebar i{
+  padding-right: 10px;
+}
+
+label #sidebar_btn{
+  z-index: 1;
+  color: #fff;
+  position: fixed;
+  cursor: pointer;
+  left: 300px;
+  font-size: 20px;
+  margin: 5px 0;
+  transition: 0.5s;
+  transition-property: color;
+}
+
+label #sidebar_btn:hover{
+  color: #19B3D3;
+}
+
+#check:checked ~ .sidebar{
+  left: -190px;
+}
+
+#check:checked ~ .sidebar a span{
+  display: none;
+}
+
+#check:checked ~ .sidebar a{
+  font-size: 20px;
+  margin-left: 170px;
+  width: 80px;
+}
+
+#check:checked ~ .content{
+  margin-left: 60px;
+}
+
+#check{
+  display: none;
+}
+/*sns btn*/
+.snsBtn{
+   box-sizing: border-box;
+    font-family: 'neuzeit-grotesk', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1em;
+    line-height: 1.5;
+    color: #ffffffee;
+    scroll-behavior: smooth;
+}
+
+.snsBtn::before, .snsBtn::after{
+   box-sizing: inherit;
+}
+
+.snsBtn.main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    min-height: 240px;
+    background-color: #f3feff;
+}
+
+.snsBtn::selection {
+    color: #fff;
+    background-color: #f3feff;
+}
+
+
+.btn-section {
+    display: flex;
+    padding: 55px;
+}
+
+.btn-section button {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 250px 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 400ms;
+  
+    animation: zoom 500ms ease;
+}
+
+.btn-section button i {
+    position: absolute;
+    font-size: 1.5em;
+    transition: 400ms;
+}
+
+.btn-section .btn-fb {
+    background-color: #ecf0f8bb;
+    color: #3b5998;
+}
+
+.btn-section .btn-tw {
+    background-color: #e5f4fdbb;
+    color: #1da1f2;
+}
+
+.btn-section .btn-ig {
+    background-color: #f4ecf9bb;
+    color: #833ab4;
+}
+
+.btn-section .btn-cp {
+    background-color: #ebfaf0bb;
+    color: #47cf73;
+}
+
+.btn-section .first-logo {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.btn-section .second-logo {
+    position: absolute;
+    top: calc(50% + 30px);
+    left: 60%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.btn-section button:hover .first-logo {
+    position: absolute;
+    top: -30px;
+    opacity: 0;
+}
+
+.btn-section button:hover .second-logo {
+    top: 50%;
+    opacity: 1;
+}
+
+.btn-section button:active {
+    background-color: #ffffff00;
+}
+
+
+@keyframes zoom {
+  
+}
+
+/*bottom navigtion*/
+
+.bottomNav{
+  outline: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+  
+}
+
+input[name="menu"]{display:none}
+
+.menu {
+  width: 650px;
+  
+}
+.list{
+   margin-left: -70px;
+   width: 800px;
+   height: 45px;
+   overflow: hidden;
+   background: #FCF6F5;
+   position: relative;
+   border:1px solid #ccc;
+   box-shadow: 3px 3px 3px 3px #000;
+   border-top-left-radius:10px;
+   border-top-right-radius:10px;
+}
+.list .link-wrap{
+   width: 100%;
+   height: 100%;
+   display: table;
+}
+.list .link-wrap>label{
+   color: #7b9acc;
+   z-index: 999;
+   min-width: 68px;
+   max-width: 168px;
+   width: 35%;
+   font-size: 12px;
+   cursor: pointer;
+   padding: 4px 12px;
+   text-align: center;
+   position: relative;
+   display: table-cell;
+   vertical-align: middle;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+.list .link-wrap>label>a {
+   text-decoration: none;
+}
+.list .link-wrap>label>a>i {
+   font-size:20px; 
+}
+
+
+
+
+
+
+
+
+.btn-section a{
+	margin: 0;
+	padding: 0;
+}
+
+
+
+

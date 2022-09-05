@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="AuthMapper">
+	<select id="usernameChk" resultType="int">
+		SELECT COUNT(*) FROM memberManage_tbl WHERE userId = #{userId}
+	</select>
+	
+	<select id="CustomUserDetails" resultType="com.inus.sh.config.auth.CustomUserDetails">
+		SELECT * FROM memberManage_tbl WHERE userId = #{userId}
+	</select>
+	
+	<insert id="signup">
+		INSERT INTO memberManage_tbl (NUM, userId, PASSWORD, EMAIL, NICKNAME)
+		VALUES (USER_NUM_SEQ.NEXTVAL, #{userId}, #{password}, #{email}, #{nickname})
+	</insert>
+	
+	<select id="getMember" resultType="com.inus.sh.vo.MemberListVO" parameterType="com.inus.sh.vo.MemberListVO">
+		SELECT
+		NICKNAME
+		FROM memberManage_tbl
+	</select>
+</mapper>

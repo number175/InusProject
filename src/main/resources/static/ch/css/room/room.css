@@ -1,0 +1,111 @@
+@charset "UTF-8";
+*{
+	margin:0;
+	padding:0;
+}
+/*
+초대하기
+*/
+#inputInviteSpace {
+	display: inline-block;
+	position: fixed;
+	background: rgb(92, 92, 92);
+	left: 260px;
+	top: 80px;
+	border: 1px solid rgb(92, 92, 92);
+	width: 202px;
+	height: 100px;
+	z-index: 10;
+}
+#inputInviteSpace {
+	text-align: center;
+}
+#inputInviteSpace #FUserId {
+	width: 202px;
+    height: 25px;
+    transform: translate(-1px, 8px);
+    border: 1px solid #ccc;
+    text-align: center;
+}
+#inputInviteSpace .FuserIdSend {
+	display: inline-block;
+    width: 50px;
+    height: 30px;
+    transform: translate(0, 10px);
+    background: #E3334F;
+    color: white;
+    border: none;
+    border-radius: 5%;
+}
+/*
+채팅방 만들기
+*/
+#inputNameSpace {
+	display: none;
+	position: fixed;
+	background: rgb(92, 92, 92);
+	left: 260px;
+    top: 100px;
+	border: 1px solid rgb(92, 92, 92);
+	width: 202px;
+	height: 100px;
+	z-index: 10;
+	
+}
+#inputNameSpace p {
+	color: white;
+	text-align: center;
+	
+}
+#inputNameSpace h2 {
+	color: white;
+	text-align: center;
+}
+#inputNameSpace #roomName {
+	width: 202px;
+    height: 25px;
+    transform: translate(-1px, 8px);
+    border: 1px solid #ccc;
+    text-align: center;
+}
+#inputNameSpace input[type="button"] {
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+    transform: translate(77px, 10px);
+    background: #E3334F;
+    color: white;
+    border: none;
+    border-radius: 5%;
+}
+/*
+채팅방
+*/
+#connect {
+	position: relative;
+}
+#connect img {
+	transform: translate(1px,8px);
+}
+#connect p {
+    transform: translate(5px, 1px);
+}
+.go {
+	display: inline-block;
+	min-width: 120px;
+}
+.roomdel {
+	padding: 0;
+	position: absolute;
+	display: inline-block;
+	right: 5px;
+	transform: translate(-2px, 12px);
+	color: white;
+	font-size: 12px;
+	cursor: pointer;	
+}
+
+.ServerReplace ul li:hover {
+	background: rgb(92, 92, 92);
+	cursor: pointer;
+}
